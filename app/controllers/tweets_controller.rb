@@ -9,14 +9,27 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create(tweet: tweet_params[:tweet], user_id: current_user.id)
-    redirect_to root_path
-  end
-
-  def update
+    @tweet = Tweet.create(tweet: tweet_params[:tweet], user_id: current_user.id)
+    respond_to do |f|
+      f.html{ redirect_to root_path }
+      f.json
+    end
   end
 
   def edit
+    @tweet = Tweet.find(params[:id])
+  end
+
+  def update
+    tweet = Tweet.find(params[:id])
+    tweet.update(tweet_params) if tweet.user_id == current_user.id
+    redirect_to root_path
+  end
+
+  def destroy
+    tweet = Tweet.find(params[:id])
+    tweet.destroy if tweet.user_id == current_user.id
+    redirect_to root_path
   end
 
   private

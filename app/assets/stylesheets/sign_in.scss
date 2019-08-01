@@ -1,0 +1,17 @@
+.signin-box{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: ivory;
+  min-height: calc(100vh - 160px);
+  &-block{
+    margin: 50px;
+    font-size: 30px;
+    h2{
+      margin-bottom: 30px;
+    }
+  }
+  .remember{
+    height: 100px;
+    width: 100px;
+  }
+}

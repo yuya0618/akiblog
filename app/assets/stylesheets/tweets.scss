@@ -2,62 +2,109 @@
 .header{
   background-color:lightseagreen;
   width: 100%;
-  height: 200px;
+  height: 80px;
   display: flex;
+  justify-content: space-between;
   color: aliceblue;
   position: fixed;
   top:0px;
   left:0px;
+  z-index: 1;
   h1{
-    margin:50px;
-    font-size: 100px;
+    margin-left: 50px;
+    font-size: 50px;
+    line-height: 80px;
+
 
     .title{
       color: aliceblue;
       text-decoration: none;
       font-weight: bold;
-      letter-spacing: 30px;
+      letter-spacing: 20px;
       font-family: -webkit-pictograph;
     }
   }
   .list{
-    font-size: 50px;
-    display: flex;
+    font-size: 35px;
     font-family: cursive;
-    float: right;
+    line-height: 100px;
+    margin: auto 30px;
     .link{
-      margin-right: 20px;
+      margin-right: 50px;
       color: aliceblue;
       text-decoration: none;
     }
   }
 }
 
-
-
 .tweets{
   background-color: ivory;
-  padding-top: 10vh;
-  height: calc(100vh - 320px);
+  padding-top: 80px;
+  min-height: calc(100vh - 160px);
+  padding-bottom: 80px;
+  .bar{
+    height: 50px;
+    background-color: lightgray;
+    display: flex;
+    font-size: 18px;
+    &-index{
+      width: 50%;
+      float: left;
+      text-align: center;
+      border-right: 3px solid white;
+      line-height: 50px;
+    }
+    &-tweet{
+      width: 50%;
+      float: right;
+      text-align: center;
+      line-height: 50px;
+    }
+    li:hover{
+      background-color: lightblue;
+    }
+    .border{
+      border-bottom: 5px solid blue;
+    }
+  }
   .tweet{
+    font-size: 16px;
     border: 3px solid #00bcd442;
-    margin: 30px;
-    padding: 30px;
+    margin: 25px auto;
+    padding: 25px;
+    width: 55%;
+    position: relative;
+    .tag{
+      color: lightgrey;
+      position: absolute;
+      top: 0px;
+      right: 7px;
+      font-size: 30px;
+    }
+    .menu{
+      font-size: 16px;
+      width: 60px;
+      color: black;
+      display: block;
+      background-color: white;
+      border: 1px solid black;
+      position: absolute;
+      top: 20spx;
+      right: 8px;
+        a{
+          margin: 7px;
+          color: black;
+          text-decoration: none;
+        }
+    }
   }
   .pagination{
     text-align: center;
     color: blue;
-    font-size: 23px;
     font-style: oblique;
     font-family: -webkit-pictograph;
-    margin-top: 60px;
-    .page{
-      font-size: 25px;
-    }
-    .next{
-      font-size: 30px;
-    }
-    .last{
+    margin-top: 30px;
+    .page,.first,.prev,.next,.last{
       font-size: 30px;
     }
   }
@@ -66,7 +113,7 @@
 
 .footer{
   background-color: lightseagreen;
-  height: 120px;
+  height: 80px;
   width: 100%;
   position: fixed;
   bottom: 0px;
@@ -74,9 +121,9 @@
   text-align: center;
   .foot{
     color: azure;
-    font-size: 40px;
+    font-size: 25px;
     letter-spacing: 8px;
-    line-height: 120px;
+    line-height: 80px;
     font-style: oblique;
     font-family: cursive;
   }

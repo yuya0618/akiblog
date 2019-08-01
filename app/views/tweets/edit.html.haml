@@ -1,0 +1,5 @@
+.new
+  = form_with url: tweet_path("#{@tweet.id}"), method: :patch, local: true, class: 'box-edit' do |f|
+    %h1 編集する
+    = f.text_field :tweet, value:@tweet.tweet, class: 'form-edit'
+    = f.submit '送信', class: 'submit-edit'
