@@ -1,0 +1,28 @@
+.new{
+  padding-top: 80px;
+  background-color: ivory;
+  height: 420px;
+  text-align: center;
+  .box{
+    margin: 100px;
+    h1{
+      font-size: 35px;
+      margin-bottom: 40px;
+      font-family: monospace;
+    }
+    .form{
+      box-sizing: border-box;
+      width: 300px;
+      margin: 15px;
+      border: 3px solid darkcyan;
+      height: 55px;
+      width: 500px;
+    }
+    .submit{
+      border: 3px solid darkcyan;
+      height: 55px;
+      width: 100px;
+      font-size: 24px;
+    }
+  }
+}

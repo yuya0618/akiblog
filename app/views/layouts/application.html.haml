@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Akiblog
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  %body
+    .header
+      %h1
+        = link_to "AKIBLOG", root_path, class:"title"
+      %ul.list
+        = link_to "LOGIN", new_user_session_path,class:"link login"
+        = link_to "LOGOUT", destroy_user_session_path, method: :delete, class:"link logout"
+        = link_to "TWEET", new_tweet_path,class:"link tweet"
+    = yield
+    .footer
+      %h1.foot AKIBROG 2019

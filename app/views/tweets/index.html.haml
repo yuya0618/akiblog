@@ -1,0 +1,6 @@
+.tweets
+  - @tweets.each do |tweet|
+    .tweet
+      = tweet.tweet
+
+  = paginate(@tweets)

@@ -1,0 +1,5 @@
+.new
+  = form_with url: tweets_path, method: :post, local: true, class: 'box' do |f|
+    %h1 新規投稿
+    = f.text_field :tweet, placeholder: '今の気持ちを入れてみようか', class: 'form'
+    = f.submit '送信', class: 'submit'

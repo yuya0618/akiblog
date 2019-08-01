@@ -1,0 +1,83 @@
+
+.header{
+  background-color:lightseagreen;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  color: aliceblue;
+  position: fixed;
+  top:0px;
+  left:0px;
+  h1{
+    margin:50px;
+    font-size: 100px;
+
+    .title{
+      color: aliceblue;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 30px;
+      font-family: -webkit-pictograph;
+    }
+  }
+  .list{
+    font-size: 50px;
+    display: flex;
+    font-family: cursive;
+    float: right;
+    .link{
+      margin-right: 20px;
+      color: aliceblue;
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+.tweets{
+  background-color: ivory;
+  padding-top: 10vh;
+  height: calc(100vh - 320px);
+  .tweet{
+    border: 3px solid #00bcd442;
+    margin: 30px;
+    padding: 30px;
+  }
+  .pagination{
+    text-align: center;
+    color: blue;
+    font-size: 23px;
+    font-style: oblique;
+    font-family: -webkit-pictograph;
+    margin-top: 60px;
+    .page{
+      font-size: 25px;
+    }
+    .next{
+      font-size: 30px;
+    }
+    .last{
+      font-size: 30px;
+    }
+  }
+}
+
+
+.footer{
+  background-color: lightseagreen;
+  height: 120px;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  left:0px;
+  text-align: center;
+  .foot{
+    color: azure;
+    font-size: 40px;
+    letter-spacing: 8px;
+    line-height: 120px;
+    font-style: oblique;
+    font-family: cursive;
+  }
+}
