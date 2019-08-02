@@ -1,9 +1,10 @@
 .tweets
-  %ul.bar
-    %li.bar-index 投稿一覧
-    %li.bar-tweet 投稿する
+  - if user_signed_in?
+    %ul.bar
+      %li.bar-index 投稿一覧
+      %li.bar-tweet 投稿する
   %article
-    %section
+    %section#tweet-list
       - @tweets.each do |tweet|
         .tweet
           - if user_signed_in?
@@ -18,7 +19,7 @@
 
     %section
       .new
-        = form_with url: tweets_path, method: :post, local: true, class: 'box' do |f|
+        = form_with url: tweets_path, method: :post, id: "new-tweet", local: true, class: 'box' do |f|
           %h1 新規投稿
           .form-box
             = f.text_field :tweet, placeholder: '今の気持ちを入れてみようか', class: 'form'
