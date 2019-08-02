@@ -1,13 +1,16 @@
 $(function(){
+
 // 編集タグの表示ーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-  $(".menu").hide()
-  $(".tag").on('click',function(){
-    var tagnum = $('')
-    $(".menu").show()
+  $('.menu').hide();
+  $('.tag').on('click',function(){
+    var number = $('.tag').index(this);
+      console.log(number);
+    $('.menu').eq(number).show();
+    $(".tag").eq(number).on('dblclick',function(){
+      $('.menu').eq(number).hide();
+    });
   });
-  $(".tag").on('mouseover',function(){
-    $(".menu").hide()
-  });
+
 // タブ切り替えーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
   // sectionを全て隠して、最初のセクションを表示する
   $('section').hide().eq(0).show();
