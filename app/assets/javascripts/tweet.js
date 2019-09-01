@@ -1,29 +1,5 @@
 $(function(){
 
-// 編集タグの表示ーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-  $('.menu').hide();
-  $('.tag').on('click',function(){
-    var number = $('.tag').index(this);
-      console.log(number);
-    $('.menu').eq(number).show();
-    $(".tag").eq(number).on('dblclick',function(){
-      $('.menu').eq(number).hide();
-    });
-  });
-
-// タブ切り替えーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-  // sectionを全て隠して、最初のセクションを表示する
-  $('section').hide().eq(0).show();
-  // クリックしたタブが何番目のタブかをcontentに取得
-  $('.bar li').on('click',function(){
-    var content = $('.bar li').index(this);
-    // 取得した番号と同じ番号のセクションを取得
-    $('section').eq(content).show().siblings().hide();
-    $('.bar li').eq(content).addClass('border').siblings().removeClass('border');
-
-  });
-
-
   function buildPost(tweet){
     var html = `<div class="tweet">
                   <span class="tag" id="tag">▼</span>
@@ -39,6 +15,28 @@ $(function(){
                 </div>`
     return html;
   };
+// 編集タグの表示ーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+  $('.menu').hide();
+  $('.tag').on('click',function(){
+    var number = $('.tag').index(this);
+    console.log(number)
+    $('.menu').eq(number).show();
+    $(".tag").eq(number).on('dblclick',function(){
+      $('.menu').eq(number).hide();
+    });
+  });
+
+// タブ切り替えーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+  // sectionを全て隠して、最初のセクションを表示する
+  $('section').hide().eq(0).show();
+  // クリックしたタブが何番目のタブかをcontentに取得
+  $('.bar li').on('click',function(){
+    var content = $('.bar li').index(this);
+    // 取得した番号と同じ番号のセクションを取得
+    $('section').eq(content).show().siblings().hide();
+    $('.bar li').eq(content).addClass('border').siblings().removeClass('border');
+  });
+
 
   // 非同期通信ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
     $('#new-tweet').on('submit', function(e){
@@ -62,7 +60,7 @@ $(function(){
       .fail(function(){
         alert('エラー');
       })
-    // 送信ボタン復活
+    // 送信ボタン復活---------------------------------------------------------
     .always(function(){
       $('.submit').removeAttr("disabled");
     });
