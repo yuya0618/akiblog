@@ -1,3 +1,10 @@
+
+RailsとjQueryを使って初めて自分で0から作った簡単なチャットアプリです。
+
+
+![660092d44768d964e819a0cdb0aedad0](https://user-images.githubusercontent.com/52994356/66020859-8b962600-e523-11e9-857b-23edc734c864.gif)
+
+
 # usersテーブル
 |Column|Type|Options|
 |------|----|-------|
