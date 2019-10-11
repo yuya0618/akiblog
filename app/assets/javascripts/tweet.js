@@ -35,7 +35,6 @@ $(function(){
     $('section').eq(content).show().siblings().hide();
     $('.bar li').eq(content).addClass('border').siblings().removeClass('border');
   });
-
   // 非同期通信ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
     $('#new-tweet').on('submit', function(e){
       e.preventDefault();
