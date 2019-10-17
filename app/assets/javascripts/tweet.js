@@ -15,6 +15,7 @@ $(function(){
                 </div>`
     return html;
   };
+
 // 編集タグの表示ーーーーーーーーーーーーーーーーーーーーーーーーーーーー
   $('.menu').hide();
   $('.tag').on('click',function(){
