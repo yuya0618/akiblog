@@ -1,5 +1,4 @@
 $(function(){
-
   function buildPost(tweet){
     var html = `<div class="tweet">
                   <span class="tag" id="tag">▼</span>
